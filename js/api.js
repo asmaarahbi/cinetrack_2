@@ -1,4 +1,4 @@
-const url = "https://raw.githubusercontent.com/ouchad97/cinetrack-api/main/cinetrack-data.json";
+const url = "https://6afaead6730c1d152f32bcb8.mockapi.io/api/v1"
 export async function chargerFilms(){
     const data = localStorage.getItem("cinetrack");
     if(data !== null){
@@ -6,7 +6,7 @@ export async function chargerFilms(){
     }
 
     try{
-        const reponse = await fetch(url);
+        const reponse = await fetch(url+"/contents");
         if(!reponse.ok){
             throw new Error("Erreur API");
         }
