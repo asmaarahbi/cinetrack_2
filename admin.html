@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col ">
+      <header class="flex flex-wrap items-center gap-4 border-b border-neutral-900 bg-black px-6 py-4">
+          <h1 class="text-xl font-bold text-red-600">Cinétrack Admin</h1>
+           <a href="index.html" class="text-sm text-gray-400 hover:text-white">Retour au site</a>
+    </header>
+
+    <main class="flex-1 p-6 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+    <!--form ajout /modification-->
+    <div class="bg border-neutral-900 border border-neutral-800 p-6 rounded-xl h-fit ">
+      <h2 id="form_title" class="text-lg font-bold mb-4"> Ajouter un contenu</h2>
+      <form id="form_film" class="flex flex-col gap-4">
+        <input type="hidden" id="id_film">
+
+
+     <div>
+            <label class="text-xs text-gray-400">Titre</label>
+            <input type="text" id="title" class="w-full bg-black border border-neutral-700 rounded p-2 text-sm mt-1 outline-non focus:border-red-600">
+            <p id="err_title" class=" text-xs text-red-500 mt-1 hidden"></p>
+        </div>
+
+
+     <div>
+        <label class="text-xs text-gray-400">Image URL</label>
+        <input type="text" id="image" class="w-full bg-black border border-neutral-700 rounded p-2 text-sm mt-1 outline-non focus:border-red-600">
+        </div>
+
+     <div>
+         <label class="text-xs text-gray-400">Type</label>
+            <select  id="type" class="w-full bg-black border border-neutral-700 rounded p-2 text-sm mt-1 outline-non focus:border-red-600">
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+            </select>
+            </div>
+     <div>
+         <label class="text-xs text-gray-400">Année de sortie</label>
+            <input type="number" id="releaseYear" class="w-full bg-black border border-neutral-700 rounded p-2 text-sm mt-1 outline-non focus:border-red-600">
+             <p id="err_year" class=" text-xs text-red-500 mt-1 hidden"></p>
+     </div>
+      
+    <div class="flex gap-3 mt-2">
+        <button type="submit" id="btn_submit" class="flex-1 bg-red-700 hover:bg-red-800 text-white font-bold py-2 rounded " > Enregistrer</button>
+        <button type="button" id="btn_cancel" class="bg-neutral-700 hover:bg-neutral-600 text-white py-2 px-4 rounded hidden"> Annuler</button>
+    </div>
+    </form>
+    </div>
+    
+
+    </main>
+</body>
+</html>
