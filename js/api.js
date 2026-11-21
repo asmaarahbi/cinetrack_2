@@ -35,4 +35,7 @@ export const updateContent = (id, data) =>
 
 // DELETE
 export const deleteContent = (id) =>
-    request(`/contents/${id}`, { method: "DELETE" });
+    request(`/contents/${id}`, { method: "DELETE" });  
+
+export const getComments =() =>request("/comments")
+export const createComment = (data) => request("/comments",{method:"POST" , body:JSON.stringify(data)})

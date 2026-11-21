@@ -60,6 +60,19 @@
      <button id="fermer" class="absolute right-4 top-3 text-2xl hover:text-red-600">X</button>
    
    <div id="modal-contenu"></div>
+     <div class="mt-6 border-t border-neutral-800 pt-4">
+            <h3 class="mb-3 text-base font-bold">Commentaires</h3>
+            <p id="loader-commentaires" class="hidden text-sm text-gray-400">Chargement...</p>
+            <ul id="liste-commentaires" class="mb-4 flex flex-col gap-3"></ul>
+
+            <form id="form-commentaire" class="flex flex-col gap-2">
+                <input id="auteur-commentaire" type="text" placeholder="Votre nom" class="rounded border border-neutral-700 bg-black px-3 py-2 text-sm text-white outline-none">
+                <textarea id="texte-commentaire" rows="2" placeholder="Votre commentaire..." class="rounded border border-neutral-700 bg-black px-3 py-2 text-sm text-white outline-none"></textarea>
+                <p id="err-commentaire" class="hidden text-xs text-red-500"></p>
+                <button type="submit" class="rounded bg-red-700 py-2 text-sm font-bold hover:bg-red-800">Publier</button>
+            </form>
+        </div>
+    </div>
    </div>
    </div>
     <script type="module" src="js/main.js"></script>

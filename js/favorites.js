@@ -28,7 +28,7 @@ export function afficherFavoris(){
     if(favs.length === 0){
         liste.innerHTML = `<p class = " text-sm text-gray-500"> Aucun favori pour le moment</p>` 
        }else{
-        liste.innerHTML=favs.map(f=>` <li class = "flex items-center gap-3" data-id="${f.id}">
+        liste.innerHTML=favs.map(f=>` <li class = "flex items-center gap-3" data-id="${f.id}"> 
             <img src = "${f.image}" alt="${f.title}" class="h-14 w-10 rounded object-cover">
             <div class= "min-w-0 flex-1">
             <p class= "truncate text-sm font-bold">${f.title}</p>
@@ -41,4 +41,6 @@ export function afficherFavoris(){
        const nbFilms = favs.reduce((total,f)=> f.type === "movie" ? total+1 : total,0)
         const nbSeries = favs.reduce((total,f)=> f.type ==="series" ? total+1 : total,0)
        compteur.textContent = nbFilms + " films ." +nbSeries +" series "
-}        
+
+    //const favsTries = favs.slice().sort((a,b)=>a.title.localCompare(b.title))
+}    // liste. innerHTML= favsTries ......    
